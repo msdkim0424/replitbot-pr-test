@@ -8,3 +8,7 @@ test("count adds up the quantities", () => {
 test("total multiplies each price by its quantity", () => {
   assert.equal(total(items), 11);
 });
+test("empty cart has zero total and count", () => {
+  assert.equal(total([]), 0);
+  assert.equal(count([]), 0);
+});
