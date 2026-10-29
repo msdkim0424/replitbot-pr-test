@@ -8,3 +8,8 @@ test("count adds up the quantities", () => {
 test("total multiplies each price by its quantity", () => {
   assert.equal(total(items), 11);
 });
+test("free items have zero total and count their quantity", () => {
+  const freeItems = [{ price: 0, qty: 2 }];
+  assert.equal(total(freeItems), 0);
+  assert.equal(count(freeItems), 2);
+});
